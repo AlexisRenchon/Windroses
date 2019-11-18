@@ -11,9 +11,9 @@ using DataFrames
 Default_name = Symbol.(:Column, 1:24)
 
 for j = 1:length(Input_fn)
-    cd("C:\\Users\\arenchon\\Box Sync\\Heterogeneity project\\Julia language\\Windroses 484\\Input\\Raw data")
+    cd("C:\\Users\\arenchon\\Box Sync\\Heterogeneity project\\Julia language\\Met data 484\\Windroses\\Input\\Raw data")
     data = CSV.read(Input_fn[j], delim=' ',header=0,ignorerepeated=true)
-    cd("C:\\Users\\arenchon\\Box Sync\\Heterogeneity project\\Julia language\\Windroses 484")
+    cd("C:\\Users\\arenchon\\Box Sync\\Heterogeneity project\\Julia language\\Met data 484\\Windroses")
 
     # Delete the last two rows (to fix a problem in raw input files)
     n = size(data,1)
@@ -59,10 +59,10 @@ for j = 1:length(Input_fn)
     gcf() # Needed for IJulia to plot inline
 
     # Save plot in Output directory
-    cd("C:\\Users\\arenchon\\Box Sync\\Heterogeneity project\\Julia language\\Windroses 484\\Output")
+    cd("C:\\Users\\arenchon\\Box Sync\\Heterogeneity project\\Julia language\\Met data 484\\Windroses\\Output")
     Output_n = ["Apr19","Aug19","Feb19","Jan19","Jul19","Jun19","Mar19","May19","Oct19","Sep19"]
     savefig(Output_n[j])
-    cd("C:\\Users\\arenchon\\Box Sync\\Heterogeneity project\\Julia language\\Windroses 484")
+    cd("C:\\Users\\arenchon\\Box Sync\\Heterogeneity project\\Julia language\\Met data 484\\Windroses")
     data = nothing
     fig.clear()
 end
