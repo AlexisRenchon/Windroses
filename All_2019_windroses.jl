@@ -1,6 +1,6 @@
 # Load input files
 # .data file with space as delimiter, repeated (sometime many spaces between elements), no header
-
+#  test
 Input_fn = readdir("Input\\Raw data")
 # Load file which contain columns names
 using CSV
